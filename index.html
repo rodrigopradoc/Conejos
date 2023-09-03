@@ -35,7 +35,7 @@
   <header id="header" class="fixed-top d-flex align-items-cente">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
 
-      <h1 class="logo me-auto me-lg-0"><a href="index.html">Brisa & Rodrigo</a></h1>
+      <h1 class="logo me-auto me-lg-0">Brisa & Rodrigo</h1>
       <!-- Uncomment below if you prefer to use an image logo -->
 
       <nav id="navbar" class="navbar order-last order-lg-0">
@@ -50,10 +50,7 @@
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-      <a href="#" class="book-a-table-btn scrollto d-none d-lg-flex">Próximamente</a>
-      <audio autoplay>
-        <source src="sonido/MyBeauty.mp3" type="audio/mpeg">
-      </audio>
+      <a class="book-a-table-btn scrollto d-none d-lg-flex">Próximamente</a>
     </div>
   </header><!-- End Header -->
 
@@ -70,10 +67,12 @@
             <a href="#menu" class="btn-menu animated fadeInUp scrollto">Nuestros gustos</a>
           </div>
         </div>
-        <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative" data-aos="zoom-in" data-aos-delay="200">
-          <a href="https://www.youtube.com/watch?v=u6BOC7CDUTQ" class="glightbox play-btn"></a>
+        <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative">
+          <a class="play-btn" onclick="playAudio()" style="cursor: pointer;"></a>
         </div>
-
+        <audio id="myAudio">
+          <source src="sonido/MyBeauty.mp3" type="audio/mpeg">
+        </audio>
       </div>
     </div>
   </section><!-- End Hero -->
@@ -394,18 +393,6 @@
                   </div>
                 </div>
               </div>
-              <div class="tab-pane" id="tab-5">
-                <div class="row">
-                  <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3>Est eveniet ipsam sindera pad rone matrelat sando reda</h3>
-                    <p class="fst-italic">Omnis blanditiis saepe eos autem qui sunt debitis porro quia.</p>
-                    <p>Exercitationem nostrum omnis. Ut reiciendis repudiandae minus. Omnis recusandae ut non quam ut quod eius qui. Ipsum quia odit vero atque qui quibusdam amet. Occaecati sed est sint aut vitae molestiae voluptate vel</p>
-                  </div>
-                  <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="assets/img/specials-5.png" alt="" class="img-fluid">
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -694,6 +681,13 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    var x = document.getElementById("myAudio");
+    
+    function playAudio() {
+      x.play();
+    }
+    </script>
 
 </body>
 
