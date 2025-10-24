@@ -1,28 +1,17 @@
-/* Satonda.ttf (la que ya usas como “Bold Stylish Calligraphy”) */
 @font-face{
   font-family: 'Satonda';
-  src: url('../fonts/Satonda.ttf') format('truetype');
-  font-style: normal;
-  font-weight: 400;      /* esa fuente trae un solo peso; usa normal */
-  font-display: swap;
+  src: url('../fonts/Satonda.woff2') format('woff2');
+  font-weight: 400; font-style: normal; font-display: swap;
 }
-
-/* BoldAndStylishCalligraphy-5RE8.ttf  */
 @font-face{
   font-family: 'Bold And Stylish Calligraphy 5RE8';
-  src: url('../fonts/BoldAndStylishCalligraphy-5RE8.ttf') format('truetype');
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
+  src: url('../fonts/BoldAndStylishCalligraphy-5RE8.woff2') format('woff2');
+  font-weight: 400; font-style: normal; font-display: swap;
 }
-
-/* ScarlettMackenzieFree.ttf */
 @font-face{
   font-family: 'Scarlett Mackenzie Free';
-  src: url('../fonts/ScarlettMackenzieFree.ttf') format('truetype');
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
+  src: url('../fonts/ScarlettMackenzieFree.woff2') format('woff2');
+  font-weight: 400; font-style: normal; font-display: swap;
 }
 
 /* Fonts */
@@ -1748,7 +1737,7 @@ section,
 
 /* Save the Date - hero */
 .save-the-date{
-  font-family: var(--script-font);
+  font-family: var(--script-1);
   font-weight: 400;   /* no uses 400 aquí; esta familia suele venir en un solo peso */
   letter-spacing: .5px;
   color: #fff;
