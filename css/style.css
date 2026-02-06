@@ -10450,15 +10450,15 @@ html {
     font-family: __contentFont_b2dd9e, __contentFont_Fallback_b2dd9e
 }
 
-.reveal-hidden{
-  opacity:0;
-  transform:translateY(40px);
-  transition: all 0.9s ease;
+.reveal-hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.9s ease;
 }
 
-.reveal-visible{
-  opacity:1;
-  transform:none;
+.reveal-visible {
+    opacity: 1;
+    transform: none;
 }
 
 .banner {
@@ -10471,67 +10471,183 @@ html {
    BENDICIÓN + PADRES (CARDS)
 ================================ */
 
-.bless-card{
-  background: #ffffff;
-  border: 1px solid rgba(27,27,27,0.25);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.10);
-  border-radius: 16px;
-  overflow: hidden;
-  position: relative;
+.bless-card {
+    background: #ffffff;
+    border: 1px solid rgba(27, 27, 27, 0.25);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
 }
 
 /* “papel” suave */
-.bless-card::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:
-    radial-gradient(circle at 10% 10%, rgba(214,204,181,0.25), transparent 45%),
-    radial-gradient(circle at 90% 40%, rgba(214,204,181,0.18), transparent 50%),
-    linear-gradient(180deg, rgba(239,233,219,0.40), rgba(255,255,255,0.65));
-  pointer-events:none;
+.bless-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 10% 10%, rgba(214, 204, 181, 0.25), transparent 45%),
+        radial-gradient(circle at 90% 40%, rgba(214, 204, 181, 0.18), transparent 50%),
+        linear-gradient(180deg, rgba(239, 233, 219, 0.40), rgba(255, 255, 255, 0.65));
+    pointer-events: none;
 }
 
-.bless-floral{
-  width: 100%;
-  display:flex;
-  justify-content:center;
-  padding-top: 14px;
-  position: relative;
-  z-index: 1;
+.bless-floral {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 14px;
+    position: relative;
+    z-index: 1;
 }
 
-.bless-floral img{
-  width: 170px;
-  height: auto;
-  object-fit: contain;
-  filter: saturate(1.05);
-  opacity: 0.95;
+.bless-floral img {
+    width: 170px;
+    height: auto;
+    object-fit: contain;
+    filter: saturate(1.05);
+    opacity: 0.95;
 }
 
-.bless-body{
-  padding: 14px 18px 18px;
-  text-align:center;
-  position: relative;
-  z-index: 1;
+.bless-body {
+    padding: 14px 18px 18px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
-.bless-title{
-  font-size: 22px;
-  letter-spacing: 0.5px;
-  margin-top: 6px;
-  margin-bottom: 10px;
-  color: #1b1b1b;
+.bless-title {
+    font-size: 22px;
+    letter-spacing: 0.5px;
+    margin-top: 6px;
+    margin-bottom: 10px;
+    color: #1b1b1b;
 }
 
-.bless-names{
-  font-size: 16px;
-  line-height: 1.7;
-  color: rgba(27,27,27,0.85);
+.bless-names {
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgba(27, 27, 27, 0.85);
 }
 
 /* separador fino opcional dentro de tarjeta */
-.bless-names > div + div{
-  margin-top: 8px;
-  padding-top: 8px;
+.bless-names>div+div {
+    margin-top: 8px;
+    padding-top: 8px;
+}
+
+/* ===============================
+   INDICACIONES - CARD
+================================ */
+
+.tips-card {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid rgba(27, 27, 27, 0.18);
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
+    background: #fff;
+}
+
+/* “papel” suave */
+.tips-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 15% 15%, rgba(214, 204, 181, 0.28), transparent 45%),
+        radial-gradient(circle at 85% 35%, rgba(158, 195, 222, 0.18), transparent 55%),
+        linear-gradient(180deg, rgba(239, 233, 219, 0.55), rgba(255, 255, 255, 0.8));
+    pointer-events: none;
+}
+
+.tips-floral {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    padding-top: 14px;
+}
+
+.tips-floral img {
+    width: 260px;
+    max-width: 90%;
+    height: auto;
+    object-fit: contain;
+    opacity: 0.95;
+}
+
+.tips-body {
+    position: relative;
+    z-index: 2;
+    padding: 12px 18px 18px;
+    text-align: center;
+}
+
+.tips-title {
+    letter-spacing: 1px;
+    font-size: 22px;
+    margin: 6px 0 14px;
+    color: rgba(27, 27, 27, 0.7);
+}
+
+.tips-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    text-align: left;
+    padding: 6px 4px 4px;
+}
+
+.tips-item {
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    gap: 12px;
+    align-items: start;
+}
+
+.tips-ico {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(127, 169, 201, 0.6);
+    color: rgba(95, 143, 179, 0.95);
+    background: rgba(207, 232, 243, 0.25);
+}
+
+.tips-item-title {
+    font-size: 16px;
+    letter-spacing: 0.3px;
+    margin-top: 2px;
+    margin-bottom: 4px;
+    font-weight: 600;
+    color: rgba(27, 27, 27, 0.85);
+}
+
+.tips-item-desc {
+    font-size: 14px;
+    line-height: 1.45;
+    color: rgba(27, 27, 27, 0.68);
+}
+
+/* sombra suave inferior tipo tarjeta flotante */
+.tips-shadow {
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    bottom: -18px;
+    height: 30px;
+    filter: blur(12px);
+    background: rgba(0, 0, 0, 0.18);
+    z-index: 0;
+    border-radius: 999px;
+    opacity: 0.18;
+}
+
+#footer .copyright {
+    font-size: 1rem;
+    text-align: center;
 }

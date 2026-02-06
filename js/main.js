@@ -90,18 +90,52 @@ if(container){
    MUSIC TOGGLE
 ================================*/
 
-const audio = document.getElementById("song");
+/* ===============================
+   MUSIC TOGGLE (play / pause)
+================================*/
 
-document.querySelectorAll("#bottom-controls button")
-.forEach(btn=>{
-  btn.onclick = ()=>{
-    if(audio.paused){
-      audio.play();
-    }else{
-      audio.pause();
+const audio = document.getElementById("song");
+const musicBtn = document.getElementById("btn-music");
+const musicIcon = document.getElementById("music-icon");
+
+function setMusicUI(isPlaying) {
+  if (!musicBtn || !musicIcon) return;
+
+  if (isPlaying) {
+    musicIcon.src = "./img/pause-white.svg";
+    musicIcon.alt = "pause";
+    musicBtn.setAttribute("aria-label", "Pausar música");
+  } else {
+    musicIcon.src = "./img/play-white.svg";
+    musicIcon.alt = "play";
+    musicBtn.setAttribute("aria-label", "Reproducir música");
+  }
+}
+
+// estado inicial
+setMusicUI(false);
+
+if (musicBtn && audio) {
+  // click => toggle
+  musicBtn.addEventListener("click", async () => {
+    try {
+      if (audio.paused) {
+        await audio.play();  // requiere interacción del usuario (clic), OK
+      } else {
+        audio.pause();
+      }
+    } catch (err) {
+      // si el navegador bloquea, deja el icono en play
+      setMusicUI(false);
     }
-  };
-});
+  });
+
+  // mantener icono sincronizado con el estado real
+  audio.addEventListener("play", () => setMusicUI(true));
+  audio.addEventListener("pause", () => setMusicUI(false));
+  audio.addEventListener("ended", () => setMusicUI(false));
+}
+
 
 
 /* ===============================
