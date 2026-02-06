@@ -10406,7 +10406,7 @@ html {
 
 @font-face {
     font-family: Amsterdam;
-    src: url(/fonts/amsterdam-four.ttf) format("opentype");
+    src: url("../fonts/amsterdam-four.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
     font-display: swap
@@ -10414,7 +10414,7 @@ html {
 
 @font-face {
     font-family: __altFont_146def;
-    src: url(/fonts/cc233da5aaec1a38-s.p.woff2) format("woff2");
+    src: url("../fonts/cc233da5aaec1a38-s.p.woff2") format("woff2");
     font-display: swap
 }
 
@@ -10433,7 +10433,7 @@ html {
 
 @font-face {
     font-family: __contentFont_b2dd9e;
-    src: url(/fonts/8097b23520b24fd8-s.p.woff2) format("woff2");
+    src: url("../fonts/8097b23520b24fd8-s.p.woff2") format("woff2");
     font-display: swap
 }
 
@@ -10465,4 +10465,73 @@ html {
     max-height: 75%;
     overflow: hidden;
     opacity: 90%;
+}
+
+/* ===============================
+   BENDICIÓN + PADRES (CARDS)
+================================ */
+
+.bless-card{
+  background: #ffffff;
+  border: 1px solid rgba(27,27,27,0.25);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.10);
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* “papel” suave */
+.bless-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(214,204,181,0.25), transparent 45%),
+    radial-gradient(circle at 90% 40%, rgba(214,204,181,0.18), transparent 50%),
+    linear-gradient(180deg, rgba(239,233,219,0.40), rgba(255,255,255,0.65));
+  pointer-events:none;
+}
+
+.bless-floral{
+  width: 100%;
+  display:flex;
+  justify-content:center;
+  padding-top: 14px;
+  position: relative;
+  z-index: 1;
+}
+
+.bless-floral img{
+  width: 170px;
+  height: auto;
+  object-fit: contain;
+  filter: saturate(1.05);
+  opacity: 0.95;
+}
+
+.bless-body{
+  padding: 14px 18px 18px;
+  text-align:center;
+  position: relative;
+  z-index: 1;
+}
+
+.bless-title{
+  font-size: 22px;
+  letter-spacing: 0.5px;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  color: #1b1b1b;
+}
+
+.bless-names{
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(27,27,27,0.85);
+}
+
+/* separador fino opcional dentro de tarjeta */
+.bless-names > div + div{
+  margin-top: 8px;
+  padding-top: 8px;
 }
