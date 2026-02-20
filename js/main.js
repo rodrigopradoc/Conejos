@@ -150,10 +150,6 @@ const bcpText = `BCP
 Cuenta: 19177944158070
 CCI: 00219117794415807059`;
 
-const interbankText = `Interbank
-Cuenta: 250 3101969360
-CCI: 00325001310196936088`;
-
 const yapeText = `Yape: 980701556`;
 
 if (modal && openBtn && closeBtn) {
